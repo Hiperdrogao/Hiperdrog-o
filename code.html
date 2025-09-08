@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drogaria Hiperdrogão - Saúde e Bem-Estar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles with red and yellow theme */
+        .hero-section {
+            background: linear-gradient(135deg, #dc2626 0%, #eab308 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #dc2626;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(220, 38, 38, 0.3);
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #eab308;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fef3c7; /* Light yellow background */
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #dc2626, #eab308);
+            border: none;
+            color: white;
+            transition: background 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #eab308, #dc2626);
+        }
+        .text-primary { color: #dc2626; }
+        .text-secondary { color: #eab308; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-red-600 shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <h1 class="text-yellow-400 text-2xl font-bold">Drogaria Hiperdrogão</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link text-white">Início</a>
+                <a href="#produtos" class="nav-link text-white">Produtos</a>
+                <a href="#servicos" class="nav-link text-white">Serviços</a>
+                <a href="#sobre" class="nav-link text-white">Sobre Nós</a>
+                <a href="#contato" class="nav-link text-white">Contato</a>
+            </nav>
+            <button class="md:hidden text-white" id="menu-toggle">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-red-600 w-full">
+            <nav class="flex flex-col space-y-2 px-4 py-2">
+                <a href="#home" class="nav-link text-white">Início</a>
+                <a href="#produtos" class="nav-link text-white">Produtos</a>
+                <a href="#servicos" class="nav-link text-white">Serviços</a>
+                <a href="#sobre" class="nav-link text-white">Sobre Nós</a>
+                <a href="#contato" class="nav-link text-white">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white text-center">
+        <div class="max-w-4xl px-4">
+            <h2 class="text-5xl font-extrabold mb-4">Bem-vindo à Drogaria Hiperdrogão</h2>
+            <p class="text-xl mb-8">Sua farmácia de confiança com produtos de qualidade, atendimento excepcional e entregas rápidas.</p>
+            <a href="#produtos" class="btn-primary px-8 py-3 rounded-full text-lg font-semibold">Ver Produtos</a>
+            <div class="mt-8">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aa67d8dc-bf42-44ff-8232-c51cee28866a.png" alt="Interior de uma farmácia vibrante e moderna com prateleiras organizadas cheias de medicamentos, vitaminas, suplementos e produtos de higiene pessoal, em estilo limpo e profissional com iluminação clara, tons vermelho e amarelo para energia e confiança, enfatizando acessibilidade e saúde" class="w-full rounded-lg shadow-lg" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos Section -->
+    <section id="produtos" class="py-20 bg-yellow-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-red-600 mb-12">Nossos Produtos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="product-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/60477f08-95dd-4b3e-9487-fe521736c8c6.png" alt="Caixa de medicamentos para febre e dor com embalagem branca, azul e toques em vermelho e amarelo, apresentada em uma farmácia moderna com fundo neutro, estilo farmacêutico profissional e confiável enfatizando alívio rápido" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold text-red-600">Analgésicos</h3>
+                    <p class="text-gray-600 mb-4">Medicamentos para aliviar dores e febre de forma eficaz e segura.</p>
+                    <button class="btn-primary px-4 py-2 rounded">Comprar Agora</button>
+                </div>
+                <div class="product-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cc479f5c-9ade-478c-bdfe-2c6055c1e69a.png" alt="Frascos de vitaminas e suplementos nutricionais dispostos em uma prateleira de farmácia, com embalagens coloridas vibrantes incluindo verde, amarelo e vermelho, estilo fresco e saudável com frutas ilustradas e etiquetas coloridas" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold text-yellow-600">Vitaminas e Suplementos</h3>
+                    <p class="text-gray-600 mb-4">Suplementos para melhorar sua saúde e bem-estar diário com nutrientes essenciais.</p>
+                    <button class="btn-primary px-4 py-2 rounded">Comprar Agora</button>
+                </div>
+                <div class="product-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/08b0f51b-8e68-4c9a-96a7-3cc0bd0cd67e.png" alt="Produtos de higiene pessoal como shampoos, cremes faciais e sabonetes organizados em uma gondola de loja, embalagens transparentes, brancas e com toques em vermelho e amarelo, estilo limpo e aromático simbolizando pureza e frescor" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold text-red-600">Higiene Pessoal</h3>
+                    <p class="text-gray-600 mb-4">Produtos essenciais para cuidados diários com a pele e higiene, sempre de qualidade.</p>
+                    <button class="btn-primary px-4 py-2 rounded">Comprar Agora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-20 bg-red-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-yellow-600 mb-12">Nossos Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-red-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9c7cd9b9-3b28-42d0-bd0c-7cae65b7b188.png" alt="Farmacêutico sorridente aconselhando cliente em um balcão de farmácia moderna com cores vermelho e amarelo, com computador, medicamentos ao fundo e ambiente amigável promovendo cuidado pessoal e confiança" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold text-red-600">Aconselhamento Farmacológico</h3>
+                    <p class="text-gray-600">Equipe especializada pronta para orientar sobre medicamentos com segurança.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-red-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1869b9d8-57fd-4f32-bd55-91c4aacc0495.png" alt="Caixa de entrega com medicamentos sendo preparada em uma farmácia, com veículo de entrega ao lado em estética vermelha e amarela, estilo eficiente e confiável com foco em rapidez, segurança e cores vibrantes" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold text-yellow-600">Entrega a Domicílio</h3>
+                    <p class="text-gray-600">Entregamos seus medicamentos no conforto da sua casa de forma rápida e segurança.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-red-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/938798b5-2996-457f-ae3b-5cfe4ca6376e.png" alt="Monitor cardíaco e pressão arterial sendo verificados em uma clínica anexa a farmácia com profissional de saúde atencioso, estilo médico e tecnológico enfatizando prevenção, com detalhes em vermelho e amarelo para energia saúde" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold text-red-600">Consultas de Saúde</h3>
+                    <p class="text-gray-600">Verificações regulares de pressão e outros exames básicos para sua saúde preventiva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós Section -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/55e74ccd-e755-4919-9c46-992663d29c7b.png" alt="Equipe de farmacêuticos sorridentes em uma farmácia limpa com prateleiras bem organizadas, ambiente acolhedor vermelha e amarelo promovendo confiança, saúde local e comunidade" class="w-full rounded-lg shadow-lg" />
+            </div>
+            <div class="md:w-1/2 md:pl-8">
+                <h2 class="text-4xl font-bold text-red-600 mb-6">Sobre a Drogaria Hiperdrogão</h2>
+                <p class="text-gray-600 mb-4">Na Drogaria Hiperdrogão, acreditamos que a saúde e o bem-estar dos nossos clientes é prioridade número um. Com anos de experiência, oferecemos produtos de qualidade e serviços personalizados para atender às suas necessidades em saúde.</p>
+                <p class="text-gray-600">Nossa equipe de farmacêuticos especializados está sempre pronta para ajudar você a encontrar a melhor solução para seus problemas de saúde, com um toque vibrante e energética.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-20 bg-yellow-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-red-600 mb-12">Entre em Contato</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a2f0c84c-a7c1-4b8d-af17-a3421bf2c480.png" alt="Telefone vermelho antigo em uma mesa de escritório limpa com detalhes amarelos, simbolizando atendimento ao cliente fácil, acessível e confiável com vibração energética" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold text-red-600">Telefone</h3>
+                    <p class="text-gray-600">(11) 9876-5432</p>
+                </div>
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1aec42ee-8f7c-4eb1-85e5-2b83766ca67f.png" alt="Email aberto em uma tela de computador com fundo de escritório profissional, equipamentos farmacêuticos ao redor em tons vermelho e amarelo, estilo moderno e digital para comunicação eficaz" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold text-yellow-600">E-mail</h3>
+                    <p class="text-gray-600">contato@hiperdrogao.com.br</p>
+                </div>
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9166476f-1c4b-4f76-8d6b-68053da03568.png" alt="Mapa com marco de localização disponível em um site web, mostrando endereço de farmácia urbana em uma cidade brasileira com cores vermelho e amarelo para vibração, estilo cartográfico e informativo" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold text-red-600">Endereço</h3>
+                    <p class="text-gray-600">Rua Hiper, 456 - São Paulo, SP</p>
+                </div>
+            </div>
+            <form class="max-w-lg mx-auto" id="contact-form">
+                <div class="mb-4">
+                    <input type="text" placeholder="Seu Nome" class="w-full px-3 py-2 border border-red-300 rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <input type="email" placeholder="Seu E-mail" class="w-full px-3 py-2 border border-red-300 rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <textarea placeholder="Sua Mensagem" class="w-full px-3 py-2 border border-red-300 rounded-lg" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary px-6 py-2 rounded-lg">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-red-600 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 Drogaria Hiperdrogão. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission (basic handling)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado por sua mensagem! Entraremos em contato em breve.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
